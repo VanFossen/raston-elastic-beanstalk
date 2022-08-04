@@ -8,6 +8,10 @@ import numpy as np
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def ftir():
+    return "<h1>ftir</h1>"
+
 @app.route('/post_json', methods=['POST'])
 def process_json():
     # put incoming JSON into a dictionary
